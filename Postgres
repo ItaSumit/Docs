@@ -1,1 +1,6 @@
 https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb
+
+Get path where postgres installed: select setting from pg_settings where name = 'data_directory';
+
+Start pgadmin : pg_ctl -D /usr/local/var/postgres start
+
