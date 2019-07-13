@@ -2,6 +2,13 @@ Pull image fro docker: docker pull postgres:alpine
 Run contaner: docker run --name postgres-0 -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres
 start bash: docker exec -it postgres-0 bash
 some commands after inside bash: pwd and ls
+start psql in bash: psql
+set user: psql -U postgres
+create database: create database test;
+connect to database: \c test
+connec to server: psql -h localhost -p 5233 -U postgres
+
+
 stop container: docker stop postgres-0
 start container: docker start postgres-1
 list all container: docker ps -a
