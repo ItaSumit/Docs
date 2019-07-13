@@ -1,0 +1,10 @@
+Pull image fro docker: docker pull postgres:alpine
+Run contaner: docker run --name postgres-0 -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres
+start bash: docker exec -it postgres-0 bash
+some commands after inside bash: pwd and ls
+stop container: docker stop postgres-0
+start container: docker start postgres-1
+list all container: docker ps -a
+list all images: docker images
+docker help: docker --help
+
