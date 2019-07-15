@@ -15,3 +15,5 @@ list all container: docker ps -a
 list all images: docker images
 docker help: docker --help
 
+https://stackoverflow.com/questions/33357567/econnrefused-for-postgres-on-nodejs-with-dockers
+
