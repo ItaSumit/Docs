@@ -78,7 +78,14 @@ Problem:
 Create a new virtual network named socgen
 create two containers from elasticsearch: 2 image
 use --network-alias search when creating them to give additional DNS name to respond
-Run alpine nslookup search with --net to see the two containers let for the same DNS name
+Run alpine nslookup search with --net to see the two containers list for the same DNS name
 Run centos curl -s search:9200 with --net multiple times until you see unique names 
 
-
+docker network create socgen
+docker pull elasticsearch:2
+docker container run --net socgen --name elastic1 --network-alias search -d elasticsearch:2
+docker container run --net socgen --name elastic2 --network-alias search -d elasticsearch:2
+docker pull alpine
+docker container run --net socgen alpine nslookup search (nslookup is tool for network)
+docker pull centos
+docker container run --net socgen centos curl -s search:9200 (9200 is port number of elasticsearch default port )
