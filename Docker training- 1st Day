@@ -1,5 +1,5 @@
 docker default IP- 192.168.99.100
 docker pull nginx
-docker images or docker image ls
-docker container run -p 5000:80 nginx or docker run -p 5000:80
+docker images OR docker image ls
+docker container run -p 5000:80 nginx OR docker run -p 5000:80
 
