@@ -144,5 +144,6 @@ remove previous postgres container:docker container rm psql1
 create new postgres container with same volume and 9.6.2 version: 
 docker container run -d --name psql1 -v psql-data:/var/lib/postgresql/data postgres:9.6.2
 check logs: docker container logs psql1
+docker container exec -it psql2 bash
 
 
