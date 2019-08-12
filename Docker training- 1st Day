@@ -6,15 +6,15 @@ docker image inspect {imageid}
 docker container run -p 5000:80 nginx OR docker run -p 5000:80 (without container word , works with old api, which will be deprciated soon)
 Detach mode- docker container run -p 5000:80 -d nginx (--detach also can be used)
 docker container ls (will show only live container)
-docker container stop {conatinerid}
+docker container stop {containerid}
 docker container ls -a (will show all container including stopped)
-docker conatiner start {containeriid} (will start stopped container)
-docker container rm {conatinerid or conatinername}
+docker container start {containeriid} (will start stopped container)
+docker container rm {containerid or containername}
 
 Practice- 
 docker container run -p 80:80 --name myhttpd -d httpd (don't user port 443)
 docker container run -p 81:80 --name mynginx -d nginx
 docker container run -p 3306:8080 --name mymysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes -d mysql
-docker container logs {conatinerid}
+docker container logs {containerid}
 
 
