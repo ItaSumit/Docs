@@ -30,6 +30,7 @@ without latest tag (it will not create new repository instead it will create ano
 docker tag nginx itasumit/mynginx:1.0
 docker push itasumit/mynginx:1.0
 
+________________
 2nd Half:
 docker netwrok ls
 docker network create myapp
@@ -71,3 +72,13 @@ ping mynginx3.myapp2
 Disconnect app from network
 docker network disconnect {networkname} {containername}  
 docker network disconnect myapp2 mynginx
+
+______________
+Problem: 
+Create a new virtual network named socgen
+create two containers from elasticsearch: 2 image
+use --network-alias search when creating them to give additional DNS name to respond
+Run alpine nslookup search with --net to see the two containers let for the same DNS name
+Run centos curl -s search:9200 with --net multiple times until you see unique names 
+
+
