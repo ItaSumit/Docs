@@ -91,3 +91,6 @@ docker pull alpine
 docker container run --net socgen alpine nslookup search (nslookup is tool for network, search is network alias created above)
 docker pull centos
 docker container run --net socgen centos curl -s search:9200 (9200 is port number of elasticsearch default port, search is network alias created above)
+
+Remove all stopped container : 
+docker container prune
