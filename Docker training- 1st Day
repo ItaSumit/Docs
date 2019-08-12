@@ -62,3 +62,7 @@ ping 172.18.0.2 (ip address of another container in same network)
 
 Third nginx container in diffrent network myapp2:
 docker container run -p 3002:80 --name mynginx3 -d --network myapp2 nginx
+   
+Connecting containers in different network
+docker network connect {networkname} {containername}  
+docker network connect myapp2 mynginx
