@@ -17,4 +17,6 @@ docker container run -p 81:80 --name mynginx -d nginx
 docker container run -p 3306:8080 --name mymysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes -d mysql
 docker container logs {containerid}
 
+Network communication between docker containers: Need to expose the port explicitly when it is being accessed outside. No need to expose for inter-communication.
+
 
