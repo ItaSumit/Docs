@@ -6,5 +6,6 @@ Detach mode- docker container run -p 5000:80 -d nginx (--detach also can be used
 docker container ls (will show only live container)
 docker container stop {conatinerid}
 docker container ls -a (will show all container including stopped)
+docker conatiner start {containeriid} (will start stopped container)
 docker image inspect {imageid}
 
