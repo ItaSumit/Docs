@@ -11,6 +11,8 @@ docker container ls -a (will show all container including stopped)
 docker conatiner start {containeriid} (will start stopped container)
 docker container rm {conatinerid or conatinername}
 
-Practice- docker container run -p 80:443 --name myhttpd -d httpd
+Practice- 
+docker container run -p 80:443 --name myhttpd -d httpd
+docker container run -p 81:80 --name mynginx -d nginx
 
 
