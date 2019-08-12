@@ -116,3 +116,10 @@ cd usr/share/nginx/html/
 #/ :app-get update
 #/ :app-get install nano
 #/ :nano index.html
+
+Stop and remove container
+
+Create new container
+docker container run -d -p 5000:80  --name nginx1 -v nginxvol:/usr/share/nginx/html nginx
+
+
