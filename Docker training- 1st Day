@@ -19,4 +19,5 @@ docker container logs {containerid}
 
 Network communication between docker containers: Need to expose the port explicitly when it is being accessed outside. No need to expose for inter-communication.
 
+Docker login- docker login
 
