@@ -105,3 +105,14 @@ docker container prune
 Volumes:
 -------------------------------
 docker container run --name nginxtest -p 5000:80 -d -v /c/Users/Administrator/Desktop/html:/usr/share/nginx/html nginx
+
+docker volume ls
+docker volume create database
+
+docker volume create nginxvol
+docker container run -d -p 5000:80 -v nginxvol:/usr/share/nginx/html nginx
+docker container exec -it 08ddbd31b1ad bash
+cd usr/share/nginx/html/
+#/ :app-get update
+#/ :app-get install nano
+#/ :nano index.html
