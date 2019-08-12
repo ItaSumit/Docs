@@ -47,10 +47,10 @@ ping 172.18.0.2 (ip address of another container in same network)
 /# cd usr/share/nginx/html 
 /#: cat index.html
 
-Second nginx container
+Second nginx container in same network
 docker container run -p 3001:80 --name mynginx2 -d --network myapp nginx
 
-docker inspect {networkname}
+docker inspect {networkname}. Will see connected container to this network
 container host name- containername.networkname
 
 inside bash of any nginx container- 
@@ -58,3 +58,7 @@ apt-get update
 apt-get install iputils-ping
 
 ping 172.18.0.2 (ip address of another container in same network)
+
+
+Third nginx container in diffrent network myapp2:
+docker container run -p 3002:80 --name mynginx3 -d --network myapp2 nginx
