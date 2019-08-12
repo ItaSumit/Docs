@@ -117,9 +117,11 @@ cd usr/share/nginx/html/
 #/ :app-get install nano
 #/ :nano index.html
 
-Stop and remove container
+Stop and remove container created above
 
 Create new container
 docker container run -d -p 5000:80  --name nginx1 -v nginxvol:/usr/share/nginx/html nginx
+
+Should show index page as modified in volume nginxvol
 
 
