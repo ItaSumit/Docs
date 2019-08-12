@@ -67,3 +67,7 @@ Connecting containers in different network
 docker network connect {networkname} {containername}  
 docker network connect myapp2 mynginx
 ping mynginx3.myapp2 
+
+Disconnect app from network
+docker network disconnect {networkname} {containername}  
+docker network disconnect myapp2 mynginx
