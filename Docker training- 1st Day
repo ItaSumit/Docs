@@ -24,4 +24,5 @@ Docker login- docker login
 tag and push
 
 docker tag nginx itasumit/mynginx
+docker push itasumit/mynginx
 
