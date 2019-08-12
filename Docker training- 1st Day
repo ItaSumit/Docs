@@ -44,4 +44,4 @@ gives root accesss=>docker container exec -it mynginx bash
 Second nginx container
 docker container run -p 3001:80 --name mynginx2 -d --network myapp nginx
 
-
+docker inspect {networkname}
