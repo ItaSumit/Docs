@@ -30,3 +30,9 @@ without latest tag (it will not create new repository instead it will create ano
 docker tag nginx itasumit/mynginx:1.0
 docker push itasumit/mynginx:1.0
 
+2nd Half:
+docker netwrok ls
+docker network create myapp
+docker container run -p 3000:80 --name mynginx -d --network myapp nginx
+docker container run --name myubuntu --network myapp ubuntu
+
