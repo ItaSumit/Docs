@@ -94,3 +94,7 @@ docker container run --net socgen centos curl -s search:9200 (9200 is port numbe
 
 Remove all stopped container : 
 docker container prune
+
+
+Volumes:
+-------------------------------
