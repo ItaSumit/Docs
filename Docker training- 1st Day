@@ -36,3 +36,12 @@ docker network create myapp
 docker container run -p 3000:80 --name mynginx -d --network myapp nginx
 docker container run --name myubuntu --network myapp ubuntu
 
+gives root accesss=>docker container exec -it mynginx bash
+/#: ls
+/# cd usr/share/nginx/html 
+/#: cat index.html
+
+Second nginx container
+docker container run -p 3001:80 --name mynginx2 -d --network myapp nginx
+
+
