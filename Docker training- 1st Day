@@ -130,5 +130,19 @@ After successfull execution, check usings logs whether the instance is running p
 Next,
 We need to upgrade the database version from 9.6.1 to 9.6.2 keeping the same voulme
 
+Solution:
+docker volume create psql-data
+docker pull postgres:9.6.1
+docker container run -d --name psql1 -v psql-data:/var/lib/postgresql/data postgres:9.6.1
+docker container logs psql1
+
+Updating version:
+docker pull postgres:9.6.2
+stop previous postgres container: docker container stop psql1
+remove previous postgres container:docker container rm psql1
+
+create new postgres container with same volume and 9.6.2 version: 
+docker container run -d --name psql1 -v psql-data:/var/lib/postgresql/data postgres:9.6.2
+check logs: docker container logs psql1
 
 
