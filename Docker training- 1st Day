@@ -26,3 +26,7 @@ tag and push
 docker tag nginx itasumit/mynginx
 docker push itasumit/mynginx
 
+without latest tag
+docker tag nginx itasumit/mynginx:1.0
+docker push itasumit/mynginx:1.0
+
