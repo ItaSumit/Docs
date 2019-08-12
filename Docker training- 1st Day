@@ -41,6 +41,8 @@ inside bash-
 apt-get update
 apt-get install iputils-ping
 
+ping 172.18.0.2 (ip address of another container in same network)
+
 /#: ls
 /# cd usr/share/nginx/html 
 /#: cat index.html
@@ -51,3 +53,8 @@ docker container run -p 3001:80 --name mynginx2 -d --network myapp nginx
 docker inspect {networkname}
 container host name- containername.networkname
 
+inside bash of any nginx container- 
+apt-get update
+apt-get install iputils-ping
+
+ping 172.18.0.2 (ip address of another container in same network)
