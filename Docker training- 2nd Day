@@ -12,3 +12,11 @@ RUN apt-get update && \
     apt-get install htop
     
 Image history: docker image history itasumit/nginxalpha
+
+Replacing index.html file with our own content
+------------------------------------------------
+
+set WORKDIR and COPY commands in Dockerfile 
+
+If copy index.html does not work , check config file at below path and look for index html path
+nginx config path- /etc/nginx/sites-enabled and then cat default
