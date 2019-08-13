@@ -20,3 +20,7 @@ set WORKDIR and COPY commands in Dockerfile
 
 If you don't see new content of index.html , check config file at below path and look for index html path
 nginx config path- /etc/nginx/sites-enabled and then cat default
+
+Dockerfile with logs: refer actual dockerfile in git for the image. for nginx add below two RUN command
+ && ln -sf /dev/stdout /var/log/nginx/access.log \
+ && ln -sf /dev/stderr /var/log/nginx/error.log
