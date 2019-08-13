@@ -36,3 +36,11 @@ Download the github repository of nginx into downloads
 Create a folder with 3 files, copy the complete folder into root directory of nginx
 
 Link: https://github.com/dockerfile/nginx
+
+Solution:
+Refer docker file in Dockerimages folder
+--------------------------------------------
+
+
+Docker Compose:
+
