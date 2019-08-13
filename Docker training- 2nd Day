@@ -1,1 +1,6 @@
 
+Creating an image:
+To create an image , start from base image (ubuntu, alpine...)
+
+Build image command: docker build -t=itasumit/nginxalpha .
+In above command: -t is tag name and . represent current directory
