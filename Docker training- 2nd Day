@@ -26,3 +26,13 @@ Dockerfile with logs:
 refer actual dockerfile in git for the image. for nginx add below two RUN command
  && ln -sf /dev/stdout /var/log/nginx/access.log \
  && ln -sf /dev/stderr /var/log/nginx/error.log
+
+
+Problem:
+Create Nginx and PHP 7.0 image
+Allow port 81 to be mapped also run nginx at 81
+Create a folder inside /var called downloads
+Download the github repository of nginx into downloads
+Create a folder with 3 files, copy the complete folder into root directory of nginx
+
+Link: https://github.com/dockerfile/nginx
