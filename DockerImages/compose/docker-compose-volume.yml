@@ -1,0 +1,29 @@
+version: "3"
+services:
+  frontend:
+    image : nginx
+    ports:
+      - "8080:80"
+    networks:
+      - mynet
+    depends_on:
+      - database
+  database:
+    image : postgres
+    environment:
+      POSTGRES_PASSWORD: example
+    networks:
+      - mynet
+  otherservice:
+    image: nginx
+    ports:
+      - "5004:80"
+    networks:
+      - younet
+    volumes:
+      - nginxvol1:/usr/share/nginx/html:ro
+networks:
+  mynet:
+  younet:
+volumes:
+  nginxvol1:
