@@ -4,3 +4,11 @@ To create an image , start from base image (ubuntu, alpine...)
 
 Build image command: docker build -t=itasumit/nginxalpha .
 In above command: -t is tag name and . represent current directory
+
+Multiple RUN is not recommended because it will create many layers. Use && operator to combine multiple RUN commands
+Example:
+RUN apt-get update && \
+    apt-get install nginx -y && \
+    apt-get install htop
+    
+Image history: docker image history itasumit/nginxalpha
