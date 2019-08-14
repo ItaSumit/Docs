@@ -46,3 +46,5 @@ deploye->
   configuration: how much  cpu
   IfFailed: restart
 
+watch docker node ls
+
