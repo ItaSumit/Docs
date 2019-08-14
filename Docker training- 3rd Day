@@ -32,9 +32,17 @@ docker swarm join --token {sometoken} {swarm system ip}
 
 Need to open swarm sytem port in windows firewall
 
+
+
+docker node -> docker node ls
 Docker swarm
-docker service
 docker stack
+docker service
 docker secret
-docker node
+ingress
+overlay network
+deploye-> 
+  replica
+  configuration: how much  cpu
+  IfFailed: restart
 
