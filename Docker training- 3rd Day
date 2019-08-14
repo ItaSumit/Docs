@@ -83,6 +83,8 @@ docker stack deploy -c docker-compose.yml drupalservice
 
 While configuring drupal, use "secret" as password 
 
+test: https://github.com/patrickpaip/dockers/blob/master/probstatement.pdf
+
 
 
 
