@@ -72,6 +72,18 @@ creaing drupal and postgres
 docker service create --network mynetswarm --name drupal -p 5000:80 drupal
 docker service create --network mynetswarm --name pg -e POSTGRES_PASSWORD=exapmle  postgres
 
+Docker secrets:
+-------------------
+docker secret ls
+echo "secret"| docker secret create psqlpass - 
+
+Docker stack:
+
+docker stack deploy -c docker-compose.yml drupalservice
+
+While configuring drupal, use "secret" as password 
+
+
 
 
 
