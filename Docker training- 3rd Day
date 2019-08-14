@@ -23,6 +23,12 @@ Join other system as manager:
 docker swarm join-token manager
 
 read the output of above command carefully. It will give token to join other system as Manager
+---------------------------
+Docker ubuntu user set up:
+
+sudo groupadd docker
+sudo usermod -aG docker $USER
+----------------------------
 
 leave the swarm
 docker swarm leave --force
