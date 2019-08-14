@@ -23,6 +23,12 @@ Join other system as manager:
 docker swarm join-token manager
 
 read the output of above command carefully. It will give token to join other system as Manager
+---------------------------
+Docker ubuntu user set up:
+
+sudo groupadd docker
+sudo usermod -aG docker $USER
+----------------------------
 
 leave the swarm
 docker swarm leave --force
@@ -32,9 +38,54 @@ docker swarm join --token {sometoken} {swarm system ip}
 
 Need to open swarm sytem port in windows firewall
 
+
+
+docker node -> docker node ls
 Docker swarm
-docker service
 docker stack
+docker service
 docker secret
-docker node
+ingress
+overlay network
+deploye-> 
+  replica
+  configuration: how much  cpu
+  IfFailed: restart
+
+watch docker node ls
+
+docker service create -p 5000:80 nginx
+docker service ls
+docker service ps serviceid
+docker service rm serviceid
+
+With replica
+
+docker service create --replicas 3 -p 5000:80 nginx
+
+Error response from daemon: rpc error: code = Unknown desc = The swarm does not have a leader. It's possible that too few managers are online. Make sure more than half of the managers are online.
+
+docker service update serviceid --replicas 5
+docker network create mynet --driver overlay
+
+creaing drupal and postgres 
+docker service create --network mynetswarm --name drupal -p 5000:80 drupal
+docker service create --network mynetswarm --name pg -e POSTGRES_PASSWORD=exapmle  postgres
+
+Docker secrets:
+-------------------
+docker secret ls
+echo "secret"| docker secret create psqlpass - 
+
+Docker stack:
+
+docker stack deploy -c docker-compose.yml drupalservice
+
+While configuring drupal, use "secret" as password 
+
+
+
+
+
+
 
