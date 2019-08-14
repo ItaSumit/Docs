@@ -9,7 +9,7 @@ services:
     depends_on:
       - backend
     volumes:
-      - /c/Users/Administrator/Desktop/Sumit/Docs/DockerImages/compose/html:/usr/share/nginx/html
+      - /c/Users/Administrator/Desktop/Docs/DockerImages/compose/Practice/html:/usr/share/nginx/html
   backend:
     image : node
     networks:
