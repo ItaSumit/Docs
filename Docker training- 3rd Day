@@ -14,7 +14,7 @@ Error response from daemon:
 could not choose an IP address to advertise since this system has multiple addresses on different interfaces
 (10.0.2.15 on eth0 and 192.168.99.100 on eth1) - specify one with --advertise-addr
 
-docker swarm init --advertise-addr 10.0.2.15
+docker swarm init --advertise-addr {ethernet adapter ip, Ethernet adapter Ethernet:}
 
 read the output of above command carefully. It will give token to join other system as Worker
 
@@ -29,4 +29,6 @@ docker swarm leave --force
 
 To join swarm
 docker swarm join --token {sometoken} {swarm system ip}
+
+Need to open swarm sytem port in windows firewall
 
