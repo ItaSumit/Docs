@@ -1,1 +1,7 @@
 
+Task1:
+
+Install a Drupal Image along with postgres and configure it.
+
+While configuring drupal with wizard, use postgres host as given service name in docker-compose file
+No need to expose port fro postgres service because drupal and postgres are in same network
