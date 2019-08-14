@@ -1,0 +1,38 @@
+version: "3.1"
+services: 
+  drupal:
+    image : drupal
+    ports:
+      - "5000:80"
+    volumes:
+      - drupalvolmodules:/var/www/html/modules
+      - drupalvolprofiles:/var/www/html/profiles
+      - drupalvolthemes:/var/www/html/themes
+      - drupalvolsites:/var/www/html/sites
+    
+  database:
+    image : postgres
+    environment:
+      - POSTGRES_PASSWORD_FILE=/run/secrets/psqlpass
+    secrets:
+      - psqlpass
+    ports:
+      - "5432:5432"
+    volumes:
+      - drupaldata:/var/lib/postgresql/data
+
+volumes:
+  drupaldata:
+  drupalvolmodules:
+  drupalvolprofiles:
+  drupalvolthemes:
+  drupalvolsites:
+
+secrets:
+  psqlpass:
+    external: true
+
+
+
+
+  
