@@ -5,3 +5,28 @@ Install a Drupal Image along with postgres and configure it.
 
 While configuring drupal with wizard, use postgres host as given service name in docker-compose file
 No need to expose port fro postgres service because drupal and postgres are in same network
+
+Swarm:
+Refer google images , Raft consensus group, Internal distributed state store, Manager, Worker, Gossip network
+
+docker swarm init
+Error response from daemon: 
+could not choose an IP address to advertise since this system has multiple addresses on different interfaces
+(10.0.2.15 on eth0 and 192.168.99.100 on eth1) - specify one with --advertise-addr
+
+docker swarm init --advertise-addr 10.0.2.15
+
+read the output of above command carefully. It will give token to join other system as Worker
+
+Join other system as manager:
+
+docker swarm join-token manager
+
+read the output of above command carefully. It will give token to join other system as Manager
+
+leave the swarm
+docker swarm leave --force
+
+To join swarm
+docker swarm join --token {sometoken} {swarm system ip}
+
