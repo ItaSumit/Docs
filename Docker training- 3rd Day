@@ -68,4 +68,12 @@ Error response from daemon: rpc error: code = Unknown desc = The swarm does not 
 docker service update serviceid --replicas 5
 docker network create mynet --driver overlay
 
+creaing drupal and postgres 
+docker service create --network mynetswarm --name drupal -p 5000:80 drupal
+docker service create --network mynetswarm --name pg -e POSTGRES_PASSWORD=exapmle  postgres
+
+
+
+
+
 
